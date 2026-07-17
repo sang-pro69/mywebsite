@@ -87,36 +87,50 @@ function hienThi(){
 
       <tr>
 
-    <td>${index+1}</td>
+<td>${index+1}</td>
 
-    <td>${item.ten}</td>
+<td>${item.ten}</td>
 
-    <td class="status-cell">
+<td>
 
-        <label class="switch">
+<label style="cursor:pointer">
 
-            <input
-                type="checkbox"
-                ${item.tienDo==100 ? "checked" : ""}
-                onchange="doiTrangThai(${index},this.checked)">
+<input
+type="checkbox"
+${item.tienDo==100?"checked":""}
+onchange="doiTrangThai(${index},this.checked)">
 
-            <span class="slider"></span>
+${item.tienDo==100
+?"✅ Đã hoàn thành"
+:"🟡 Đang thực hiện"}
 
-        </label>
+</label>
 
-        <span class="status-text">
-            ${item.tienDo==100 ? "✅ Đã hoàn thành" : "🟡 Đang thực hiện"}
-        </span>
+</td>
 
-    </td>
+<td>${item.nguoi}</td>
 
-    <td>${item.nguoi}</td>
+<td>
 
-    <td>
-        ...
-    </td>
+<button
+class="btn edit"
+onclick="moSua(${index})">
 
-        </tr>
+<i class="fas fa-pen"></i>
+
+</button>
+
+<button
+class="btn delete"
+onclick="xoaCongViec(${index})">
+
+<i class="fas fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
 
         `;
 
