@@ -695,15 +695,7 @@ window.onload=function(){
 }
 function doiTrangThai(index, checked){
 
-    if(checked){
-
-        congViec[index].tienDo = 100;
-
-    }else{
-
-        congViec[index].tienDo = 0;
-
-    }
+    congViec[index].tienDo = checked ? 100 : 0;
 
     luuDuLieu();
 
