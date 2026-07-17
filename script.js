@@ -91,19 +91,7 @@ function hienThi(){
 
             <td>${item.ten}</td>
 
-            <td>
-
-                <div class="progress">
-
-                    <div class="progress-bar ${mau}"
-
-                    style="width:${item.tienDo}%">
-
-                    ${item.tienDo}%
-
-                    </div>
-
-                </div>
+           Thay cột Tiến độ trong hienThi()
 
             </td>
 
