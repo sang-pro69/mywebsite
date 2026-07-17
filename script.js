@@ -696,3 +696,20 @@ window.onload=function(){
     thongKe();
 
 }
+function doiTrangThai(index, checked){
+
+    if(checked){
+
+        congViec[index].tienDo = 100;
+
+    }else{
+
+        congViec[index].tienDo = 0;
+
+    }
+
+    luuDuLieu();
+
+    hienThi();
+
+}
