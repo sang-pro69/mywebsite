@@ -85,39 +85,36 @@ function hienThi(){
 
         tbody.innerHTML+=`
 
-        <tr>
+      <tr>
 
-            <td>${index+1}</td>
+    <td>${index+1}</td>
 
-            <td>${item.ten}</td>
+    <td>${item.ten}</td>
 
-           Thay cột Tiến độ trong hienThi()
+    <td class="status-cell">
 
-            </td>
+        <label class="switch">
 
-            <td>${item.nguoi}</td>
+            <input
+                type="checkbox"
+                ${item.tienDo==100 ? "checked" : ""}
+                onchange="doiTrangThai(${index},this.checked)">
 
-            <td>
+            <span class="slider"></span>
 
-                <button
-                class="btn edit"
+        </label>
 
-                onclick="moSua(${index})">
+        <span class="status-text">
+            ${item.tienDo==100 ? "✅ Đã hoàn thành" : "🟡 Đang thực hiện"}
+        </span>
 
-                <i class="fa fa-pen"></i>
+    </td>
 
-                </button>
+    <td>${item.nguoi}</td>
 
-                <button
-                class="btn delete"
-
-                onclick="moXoa(${index})">
-
-                <i class="fa fa-trash"></i>
-
-                </button>
-
-            </td>
+    <td>
+        ...
+    </td>
 
         </tr>
 
